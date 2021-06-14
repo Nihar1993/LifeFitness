@@ -14,7 +14,7 @@ import java.util.List;
 @EnableJpaRepositories(basePackages = "com.life.fitness.Repo")
 public class ProductServiceImpl implements ProductService{
     @Autowired
-   private  ProductRepository repository;
+    private  ProductRepository repository;
     @Override
     public List<ProductDetails> getAllProducts() {
         // TODO Auto-generated method stub
@@ -24,7 +24,10 @@ public class ProductServiceImpl implements ProductService{
     @Override
     public ProductDetails findProductById(Integer id) {
         // TODO Auto-generated method stub
-        ProductDetails product = repository.findProductById(id);
+       // ProductDetails product = repository.findProductById(id);
+        ProductDetails product = repository.getOne(id);
+
+        //return product;
         return product;
     }
 }

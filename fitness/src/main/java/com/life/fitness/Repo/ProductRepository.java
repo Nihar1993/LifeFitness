@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public interface ProductRepository extends JpaRepository<ProductDetails,Integer> {
     List<ProductDetails> findAll();
-    ProductDetails findProductById(Integer id);
+    //ProductDetails findProductById(Integer id);
 
 
 }
